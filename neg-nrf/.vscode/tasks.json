@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "env": {
+      "DEFMT_LOG": "info"
+    }
+  },
+  "tasks": [
+    {
+      "label": "deploy-master-right-trouble",
+      "type": "shell",
+      "command": "cargo run --release --bin master --features neg-nrf/right,neg-nrf/trouble"
+    },
+    {
+      "label": "deploy-master-right-sd",
+      "type": "shell",
+      "command": "cargo run --release --bin master --features neg-nrf/right,neg-nrf/sd"
+    },
+    {
+      "label": "deploy-master-right-raw",
+      "type": "shell",
+      "command": "cargo run --release --bin master --features neg-nrf/right,neg-nrf/cs-impl"
+    },
+    {
+      "label": "deploy-slave-left-raw",
+      "type": "shell",
+      "command": "cargo run --release --bin slave --features neg-nrf/left,neg-nrf/cs-impl"
+    },
+    {
+      "label": "deploy-master-left-raw",
+      "type": "shell",
+      "command": "cargo run --release --bin master --features neg-nrf/left,neg-nrf/cs-impl"
+    }
+  ]
+}
