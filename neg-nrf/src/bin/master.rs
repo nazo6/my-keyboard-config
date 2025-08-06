@@ -9,9 +9,9 @@ use neg_nrf::{init_peri, start_master};
 use neg_nrf as _;
 
 #[embassy_executor::main]
-async fn main(_spawner: Spawner) {
+async fn main(spawner: Spawner) {
     let p = init_peri();
 
     let hooks = create_hooks(unsafe { p.P0_31.clone_unchecked() });
-    start_master(p, hooks, &KEYMAP).await;
+    start_master(spawner, p, hooks, &KEYMAP).await;
 }

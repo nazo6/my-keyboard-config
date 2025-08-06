@@ -6,13 +6,12 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-embassy-executor = { version = "0.7.0", features = [
+embassy-executor = { version = "0.8.0", features = [
   "arch-cortex-m",
   "executor-thread",
   "executor-interrupt",
-  "nightly",
 ] }
-embassy-nrf = { version = "0.4.1", features = [
+embassy-nrf = { version = "0.6.0", features = [
   "gpiote",
   "time-driver-rtc1",
   "nrf52840",
