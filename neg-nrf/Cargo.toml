@@ -6,20 +6,20 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-embassy-executor = { version = "0.8.0", features = [
+embassy-executor = { version = "0.9.0", features = [
   "arch-cortex-m",
   "executor-thread",
   "executor-interrupt",
 ] }
-embassy-nrf = { version = "0.6.0", features = [
+embassy-nrf = { version = "0.7.0", features = [
   "gpiote",
   "time-driver-rtc1",
   "nrf52840",
   "nfc-pins-as-gpio",
 ] }
 
-neg-nrf = { path = "../../rktk/keyboards/neg-nrf" }
-rktk = { path = "../../rktk/lib/rktk" }
+neg-nrf = { path = "../../rktk/keyboards/neg/crates/neg-nrf" }
+rktk = { path = "../../rktk/crates/rktk" }
 
 cortex-m-rt = { version = "0.7.3" }
 
